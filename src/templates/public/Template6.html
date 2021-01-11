@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Hello World</title>
+    <style>
+        .template_main_section {
+            margin: 0 auto;
+            max-width: 550px;
+            text-align: center;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+        }
+
+        .h3 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="template_main_section">
+        <header>
+            <h1 class="title">About me</h1>
+        </header>
+        <main>
+            <section>
+                <p>Hi I'm {{Name}} and below this line you'll find more information about me.</p>
+            </section> <br /> <br />
+            <section>
+                <p>I have worked at:</p>
+                <h3> {{Organization}} </h3>
+            </section> <br /> <br />
+            <section>
+                <p>I have worked on:</p>
+                <div>
+                    <h4> {{Projects}} </h4>
+                </div>
+            </section>
+            <br />
+
+        </main>
+    </section>
+
+</body>
+
+</html>
