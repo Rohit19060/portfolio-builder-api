@@ -76,11 +76,15 @@ templateRouter.route("/data").post(bodyParser, (req, res, next) => {
   });
 });
 
-templateRouter.route("/count").get(bodyParser, (req, res, next) => {
+templateRouter.route("/templateData").get(bodyParser, (req, res, next) => {
   const dir = "./src/templates/public";
   fs.readdir(dir, (err, files) => {
     res.json({
-      count: files.length - 1,
+      templateData: [
+        "This Template is clean and simple with changing background, looks nice",
+        "A good looking hover effect, that reveals the thing when you hover on the object",
+        "This Template is for official use nothing fancy about it",
+      ],
     });
   });
 });

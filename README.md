@@ -49,15 +49,159 @@ For running a command before deploying. this command will fix all the error befo
 
 For deploying the API endpoint to Heroku
 
+## Schema
+
+### Portfolio_user
+
+```js
+{
+    id: {
+        type:String,
+        unique:true
+    },
+    user_name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+    password: {
+    type: String,
+    required: true,
+  },
+   date_created:{
+    type: Date,
+    default: Date.now
+  },
+   date_modified:{
+    type: Date,
+    default: Date.now
+  }
+}
+```
+
+### Portfolio_data
+
+```js
+{
+    id: {
+        type:String,
+        unique:true
+    },
+    name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+   portfolio_created: {
+     type: Date,
+    default: Date.now
+  },
+  projects:{
+    type: Array,
+    required: true,
+  },
+  organization:{
+     type: Array,
+    required: true,
+  }
+}
+```
+
+## API Overview
+
+```text
+/api
+.
+├── /auth
+│   └── POST
+│       └── /login
+├── /users
+│   └── POST
+│       └── /
+├── /templates
+│   └── GET
+│       ├── /:token
+│       └── /count
+│   └── POST
+│       └── /data
+```
+
+### POST `/api/auth/login`
+
+```js
+// req.body
+{
+  user_name: String,
+  password: String
+}
+
+// res.send
+{
+  authToken: String
+}
+```
+
+### POST `/api/users/`
+
+```js
+// req.query
+{
+  user_name: String,
+  password: String
+}
+
+// res.json
+{
+    id:String,
+    user_name:String,
+    date_created: Date,
+ };
+```
+
+### GET `api/templates/:token`
+
+```JS
+// req.query
+{
+  token: JWT Token
+}
+
+// res.write
+{
+ Content:HTML
+}
+```
+
+### GET `api/templates/count`
+
+```JS
+// res.json
+{
+    count:Number
+}
+```
+
+### POST `api/templates/data`
+
+```JS
+// req.body
+{
+    name:String,
+    projects:String,
+organization:String,
+token: JWT Token
+}
+```
+
 ## Built With
 
-- React
-- Redux
-- NPM
-- Express
-- Postgres
-- Heroku
-- Vercel
+- [Node](https://nodejs.org/en/) - Run-time environment
+- [Express](https://expressjs.com/) - Web application framework
+- [JWT](https://jwt.io/) - Authentication
+- [Mocha](https://mochajs.org/) - Testing
+- [Chai](https://www.chaijs.com/) - Testing
+- [Knex.js](http://knexjs.org/)- for interfacing with the PostgreSQL database
+- [React](https://reactjs.org/)- for building user interfaces
 
 ## Future Updates
 
@@ -79,22 +223,6 @@ Contributions, issues and feature requests are welcome!
 Feel free to check the [issues page](issues/).
 
 Give a ⭐️ if you like this project!
-
-<!-- TODO: set up a demo user account and indicate on the landing page how to use it. -->
-
-<!-- GIST -->
-## Gist
-
-1. As a new user: I want to sign up for an account.
-2. As a new user: I want to download portfolios.
-3. As a new user: I can check out multiple templates for my info.
-4. As a returning user: I need to have my account and data saved.
-5. As a returning user: I can see new templates and old too.
-6. As a returning user: I can log in back with credentials.
-7. As a admin: I can remove accounts.
-8. As a admin: I can add templates.
-9. As a admin: I can add accounts.
-10. As a admin: i can update the site.
 
 ## About
 
