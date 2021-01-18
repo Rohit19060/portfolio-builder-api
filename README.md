@@ -6,7 +6,7 @@
 
 - [Links](#links)
 - [Available Scripts](#available-scripts)
-- [Scheme](#scheme)
+- [Schema](#schema)
 - [API Overview](#api-overview)
 - [Built With](#built-with)
 - [Future Updates](#future-updates)
