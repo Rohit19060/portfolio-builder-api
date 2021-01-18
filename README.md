@@ -6,6 +6,8 @@
 
 - [Links](#links)
 - [Available Scripts](#available-scripts)
+- [Scheme](#scheme)
+- [API Overview](#api-overview)
 - [Built With](#built-with)
 - [Future Updates](#future-updates)
 - [Contact](#author)
@@ -56,9 +58,9 @@ For deploying the API endpoint to Heroku
 ```js
 {
     id: {
-        type:String,
-        unique:true
-    },
+    type:String,
+    unique:true
+  },
     user_name: {
     type: String,
     required: true,
@@ -83,11 +85,11 @@ For deploying the API endpoint to Heroku
 
 ```js
 {
-    id: {
-        type:String,
-        unique:true
-    },
-    name: {
+  id: {
+    type:String,
+    unique:true
+  },
+  name: {
     type: String,
     required: true,
     unique: true
