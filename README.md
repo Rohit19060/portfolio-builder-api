@@ -103,6 +103,14 @@ For deploying the API endpoint to Heroku
   organization:{
      type: Array,
     required: true,
+  },
+  github:{
+    type:String,
+    required:true,
+  },
+  linkedin:{
+    type:String,
+    required:true,
   }
 }
 ```
@@ -120,10 +128,13 @@ For deploying the API endpoint to Heroku
 │       └── /
 ├── /templates
 │   └── GET
+│       ├── /edit
 │       ├── /:token
 │       └── /count
 │   └── POST
+│       ├── /edit
 │       └── /data
+
 ```
 
 ### POST `/api/auth/login`
@@ -181,6 +192,19 @@ For deploying the API endpoint to Heroku
 }
 ```
 
+### GET `api/templates/edit`
+
+```JS
+// res.json
+{
+    name:String,
+    projects:String,
+    organization:String,
+    github:String,
+    linkedin:String
+}
+```
+
 ### POST `api/templates/data`
 
 ```JS
@@ -190,6 +214,20 @@ For deploying the API endpoint to Heroku
     projects:String,
 organization:String,
 token: JWT Token
+}
+```
+
+### POST `api/templates/edit`
+
+```JS
+// req.body
+{
+    name:String,
+    projects:String,
+    organization:String,
+    github:String,
+    linkedin:String
+    token: JWT Token
 }
 ```
 

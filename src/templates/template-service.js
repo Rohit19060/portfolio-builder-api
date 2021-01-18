@@ -5,14 +5,20 @@ const TemplateService = {
       .first()
       .then((user) => !!user);
   },
-  insertdata(db, formdata) {
+  insertData(db, formData) {
     return db
-      .insert(formdata)
+      .insert(formData)
       .into("portfolio_data")
       .returning("*")
       .then(([data]) => data);
   },
-  getuserfromid(db, user_id) {
+  updateData(db, formData) {
+    console.log(formData);
+    return db("portfolio_data")
+      .where({ user_id: formData.user_id })
+      .update(formData);
+  },
+  getUserFromId(db, user_id) {
     return db("portfolio_data").where({ user_id }).first();
   },
 };

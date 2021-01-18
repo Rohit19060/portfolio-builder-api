@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template 2</title>
+    <title>My Portfolio</title>
     <style>
         * {
             box-sizing: border-box;
             padding: 0px;
             margin: 0px;
         }
-    
+
         body {
             background-color: #f5f5f5;
         }
-    
+
         .circle {
             position: absolute;
             width: 100%;
@@ -25,20 +25,19 @@
             left: 0;
             clip-path: circle(70% at right -20%);
         }
-    
+
         a {
-            color: #444;
             text-decoration: none;
         }
-    
+
         .text-center {
             text-align: center;
         }
-    
+
         .capitalize {
             text-transform: capitalize;
         }
-    
+
         .template_main_div {
             animation: anim 15s infinite;
             margin-left: 20%;
@@ -55,52 +54,58 @@
             font-family: 'Arial Narrow Bold', sans-serif;
             box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
         }
-    
+
         .div_height {
             min-width: 40vh;
         }
-    
-        a {
-            text-decoration: none;
-        }
-    
+
         @keyframes anim {
             0% {
                 background: #0ca98a;
             }
-    
+
             20% {
                 background: #232425;
             }
-    
+
             40% {
                 background: #152129;
             }
-    
+
             60% {
                 background: #41341f;
             }
-    
+
             80% {
                 background: #5a4806;
             }
-    
+
             100% {
                 background: #0ca98a;
             }
         }
-    
+
         .circle_outside {
             position: relative;
+        }
+
+        .Contact_section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 25%;
+            border: 1px solid white;
+            padding: 20px;
+        }
+
+        .c-w {
+            color: white;
         }
     </style>
 </head>
 
 <body>
     <div class="template_main_div">
-        <div class="circle_outside">
-            <div class="circle"></div>
-        </div>
         <div>
             <h1 class="text-center">My Portfolio</h1>
         </div>
@@ -113,8 +118,15 @@
         <div>
             <h2 class="text-center capitalize">Organizations: {{Organization}} </h2>
         </div>
+        <section class="Contact_section">
+            <a href=" {{GitHub}} " target="_blank" class="c-w">
+                <h2 class="text-center capitalize">GitHub</h2>
+            </a>
+            <a href=" {{LinkedIn}} " target="_blank" class="c-w">
+                <h2 class="text-center capitalize c-w">LinkedIn</h2>
+            </a>
+        </section>
     </div>
-
 </body>
 
 </html>

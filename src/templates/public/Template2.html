@@ -4,94 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template 2</title>
+    <title>My Portfolio</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "montserrat", sans-serif;
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
         }
 
-        .middle {
-            position: absolute;
-            margin-top: 100px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        h1 {
+            font-weight: 600;
+            font-size: 3rem;
+            opacity: 0.8;
         }
 
-        .container {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .text {
-            font-size: 100px;
-            text-transform: uppercase;
-            font-weight: 900;
-            position: relative;
-            color: #34495E;
-            padding: 20px;
-        }
-
-        .text::before {
-            content: attr(data-text);
-            position: absolute;
-            color: #fff;
-            width: 0;
-            overflow: hidden;
-            transition: 0.2s;
-            background-color: #2980B9;
-        }
-
-        .container::before {
-            width: 0%;
-            height: 100%;
-            position: absolute;
-            background: #2980B9;
-            right: 0;
-            top: 0;
-            transition: 0.2s;
-        }
-
-        .container:hover .text::before,
-        .container:hover::before {
-            width: 100%;
-            padding: 19px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .text-center {
+        main {
+            font-family: "Poppins", sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
         }
 
-        .capitalize {
-            text-transform: capitalize;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .glass {
+            background: white;
+            min-height: 80vh;
+            width: 60%;
+            background: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.1),
+                    rgba(255, 255, 255, 0.5));
+            border-radius: 2rem;
+            z-index: 2;
+            backdrop-filter: blur(5rem);
+            display: flex;
+        }
+
+        .circle1,
+        .circle2 {
+            background: white;
+            background: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0.3));
+            height: 20rem;
+            width: 20rem;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .circle1 {
+            top: 5%;
+            right: 15%;
+        }
+
+        .circle2 {
+            bottom: 5%;
+            left: 10%;
+        }
+
+        .dashboard {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            background: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.7),
+                    rgba(255, 255, 255, 0.3));
+            border-radius: 2rem;
+        }
+
+        .link {
+            display: flex;
+            padding: 1rem 5rem;
+            align-items: center;
+        }
+
+        .link h2 {
+            padding: 0rem 2rem;
+        }
+
+        .Contact_section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 25%;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .card {
+            display: flex;
+            background: linear-gradient(to left top,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0.5));
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+            justify-content: space-between;
         }
     </style>
 </head>
 
 <body>
-    <h2 class="text-center">Hover To see Details</h2>
-
-    <div class="middle">
-        <span class="container">
-            <div class="text" data-text=" {{Name}} "> Name </div>
-            <br />
-        </span>
-        <span class="container">
-            <div class="text" data-text=" {{Projects}} "> Projects </div>
-            <br />
-        </span>
-        <span class="container">
-            <div class="text" data-text=" {{Organization}} "> Organizations </div>
-        </span>
-
-    </div>
+    <main>
+        <section class="glass">
+            <div class="dashboard">
+                <div>
+                    <h1 class="text-center">My Portfolio</h1>
+                </div>
+                <div class="user">
+                    <img src="https://static.wixstatic.com/media/fd7b0a_7e38fa4d2c904f89a2d1aed602b484c5~mv2.png/v1/fill/w_208,h_210,al_c,lg_1,q_85/Henry%20Avatar.webp"
+                        alt="" />
+                    <h1 class="card"> {{Name}} </h1>
+                </div>
+                <div class="link card">
+                    <h2>Projects: {{Projects}} </h2>
+                </div>
+                <div class="link card">
+                    <h2>Organization: {{Organization}} </h2>
+                </div>
+                <section class="Contact_section">
+                    <a href=" {{GitHub}} " target="_blank" class="c-w">
+                        <h2 class="text-center capitalize">GitHub</h2>
+                    </a>
+                    <a href=" {{LinkedIn}} " target="_blank" class="c-w">
+                        <h2 class="text-center capitalize c-w">LinkedIn</h2>
+                    </a>
+                </section>
+            </div>
+        </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
 </body>
 
 </html>

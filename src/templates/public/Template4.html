@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        .body_main {
+            background-color: #f5f5f5;
+            max-width: 80%;
+            margin: 5% 10%;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .simple-neumorphic {
+            box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+                7px 7px 15px rgba(70, 70, 70, 0.12);
+            border-radius: 15px;
+            padding: 50px 70px;
+        }
+
+
+        .effects-neumorphic {
+            padding: 15px;
+            margin: 0 15px;
+            border-radius: 10px;
+            box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+                7px 7px 15px rgba(70, 70, 70, 0.12);
+
+        }
+
+        .effects-neumorphic:hover {
+            box-shadow: inset -7px -7px 15px rgba(255, 255, 255, 0.65),
+                inset 7px 7px 15px rgba(70, 70, 70, 0.12);
+        }
+
+        .effects-neumorphic:active {
+            box-shadow: inset -7px -7px 10px rgba(255, 255, 255, 0.65),
+                inset 7px 7px 10px rgba(70, 70, 70, 0.12);
+        }
+
+        .Contact_section {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            min-width: 25%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="body_main simple-neumorphic">
+        <div>
+            <h1>My Portfolio</h1>
+        </div>
+        <br />
+        <br />
+        <div>
+            <h2 class="simple-neumorphic">Name: {{Name}} </h2>
+        </div>
+        <div class="simple-neumorphic">
+            <h2>My Projects: {{Projects}} </h2>
+        </div>
+        <div class="simple-neumorphic">
+            <h2>Organizations: {{Organization}} </h2>
+        </div> <br />
+        <br />
+        <section class="Contact_section ">
+            <a href=" {{GitHub}} " target="_blank" class="c-w effects-neumorphic">
+                <h2 class="text-center capitalize">GitHub</h2>
+            </a>
+
+            <a href=" {{LinkedIn}} " target="_blank" class="c-w effects-neumorphic">
+                <h2 class="text-center capitalize c-w">LinkedIn</h2>
+            </a>
+        </section>
+    </main>
+</body>
+
+</html>

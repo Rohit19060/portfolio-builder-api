@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React Hello World</title>
+    <title>My Portfolio</title>
     <style>
         .template_main_section {
             margin: 0 auto;
@@ -29,7 +29,7 @@
         </header>
         <main>
             <section>
-                <p>Hi I'm {{Name}} and below this line you'll find more information about me.</p>
+                <h2>Hi I'm {{Name}} and below this line you'll find more information about me.</h2>
             </section> <br /> <br />
             <section>
                 <p>I have worked at:</p>
@@ -38,7 +38,19 @@
             <section>
                 <p>I have worked on:</p>
                 <div>
-                    <h4> {{Projects}} </h4>
+                    <h3> {{Projects}} </h3>
+                </div>
+            </section><br /> <br />
+            <section>
+                <p>My Github Profile:</p>
+                <div>
+                    <h2> <a href=" {{GitHub}} " target="_blank"> {{GitHub}} </a></h2>
+                </div>
+            </section><br /> <br />
+            <section>
+                <p>My LinkedIn Account:</p>
+                <div>
+                    <h2> <a href=" {{LinkedIn}} " target="_blank"> {{LinkedIn}} </a></h2>
                 </div>
             </section>
             <br />

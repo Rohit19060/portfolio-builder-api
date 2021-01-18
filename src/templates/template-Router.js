@@ -6,8 +6,9 @@ const templateRouter = express.Router();
 const { verifyJwt } = require("../auth/auth-service");
 const {
   hasUserWithUserName,
-  insertdata,
-  getuserfromid,
+  insertData,
+  updateData,
+  getUserFromId,
 } = require("./template-service");
 
 templateRouter.route("/").get(bodyParser, (req, res, next) => {
@@ -20,33 +21,35 @@ templateRouter.route("/").get(bodyParser, (req, res, next) => {
       res.write("Form");
       return res.end();
     } else {
-      getuserfromid(db, id).then((user) => {
+      getUserFromId(db, id).then((user) => {
         // Editing templates to get the user data
         fs.readFile(
           path.resolve(__dirname, "public", `Template${req.query.id}.html`),
           (err, data) => {
             if (err) throw err;
-            var rawdata = data
+            var rawData = data
               .toString()
               .replace("\r", " ")
               .replace("\n", " ")
               .split(" ");
-            var newdata = [];
-            rawdata.forEach((element) => {
+            var newData = [];
+            rawData.forEach((element) => {
               if (element == "{{Name}}") {
                 element = user.name;
-              }
-              if (element == "{{Projects}}") {
+              } else if (element == "{{Projects}}") {
                 element = user.projects;
-              }
-              if (element == "{{Organization}}") {
+              } else if (element == "{{Organization}}") {
                 element = user.organization;
+              } else if (element == "{{GitHub}}") {
+                element = user.github;
+              } else if (element == "{{LinkedIn}}") {
+                element = user.linkedin;
               }
-              newdata.push(element);
+              newData.push(element);
             });
-            var newdataSend = newdata.join(" ");
+            var newDataSend = newData.join(" ");
             res.writeHead(200, { "Content-Type": "text/html" });
-            res.write(newdataSend);
+            res.write(newDataSend);
             return res.end();
           }
         );
@@ -55,23 +58,61 @@ templateRouter.route("/").get(bodyParser, (req, res, next) => {
   });
 });
 
-templateRouter.route("/data").post(bodyParser, (req, res, next) => {
-  // Inserting templates data from form
-  const { name, projects, organization, token } = req.body;
+templateRouter.route("/edit").get(bodyParser, (req, res, next) => {
+  let id = verifyJwt(req.query.token).user_id;
+  let db = req.app.get("db");
+  getUserFromId(db, id).then((user) => {
+    if (user) {
+      return res.status(200).json(user);
+    } else {
+      return res.status(400).json({
+        error: `User Not Found`,
+      });
+    }
+  });
+});
+
+templateRouter.route("/edit").post(bodyParser, (req, res, next) => {
+  const { name, projects, organization, github, linkedin, token } = req.body;
   let user_id = verifyJwt(token).user_id;
-  const formdata = {
+  const formData = {
     name,
     projects: Array(projects),
     organization: Array(organization),
+    github,
+    linkedin,
     user_id,
   };
-  for (const [key, value] of Object.entries(formdata)) {
+  for (const [key, value] of Object.entries(formData)) {
     if (value == null)
       return res.status(400).json({
         error: `Missing '${key}' in request body`,
       });
   }
-  return insertdata(req.app.get("db"), formdata).then((data) => {
+  return updateData(req.app.get("db"), formData).then((data) => {
+    res.status(200).json(data);
+  });
+});
+
+templateRouter.route("/data").post(bodyParser, (req, res, next) => {
+  // Inserting templates data from form
+  const { name, projects, organization, github, linkedin, token } = req.body;
+  let user_id = verifyJwt(token).user_id;
+  const formData = {
+    name,
+    projects: Array(projects),
+    organization: Array(organization),
+    github,
+    linkedin,
+    user_id,
+  };
+  for (const [key, value] of Object.entries(formData)) {
+    if (value == null)
+      return res.status(400).json({
+        error: `Missing '${key}' in request body`,
+      });
+  }
+  return insertData(req.app.get("db"), formData).then((data) => {
     res.status(200);
   });
 });
@@ -81,9 +122,10 @@ templateRouter.route("/templateData").get(bodyParser, (req, res, next) => {
   fs.readdir(dir, (err, files) => {
     res.json({
       templateData: [
-        "This Template is clean and simple with changing background, looks nice",
-        "A good looking hover effect, that reveals the thing when you hover on the object",
-        "This Template is for official use nothing fancy about it",
+        "This Template is clean and simple with automatic changing background, looks nice ",
+        "A good looking Glassmorphism effect, that make your portfolio look like Glass",
+        "This Template is for official use nothing fancy about it, just a good shadow",
+        "Neumorphism Design portfolio, it's something that will show your Skills",
       ],
     });
   });
