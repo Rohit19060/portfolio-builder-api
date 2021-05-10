@@ -1,53 +1,140 @@
-<h1 align="center"><a href="https://enigmatic-tundra-24310.herokuapp.com">Portfolio Builder API</a></h1>
+<p align="center">
+  <a href="https://github.com/Rohit19060/portfolio-builder-api" target="_blank" title="Portfolio Builder">
+    <img src="https://kingtechnologies.in/assets/images/logo.png" width="80px" alt="Portfolio Builder" />
+  </a>
+</p>
+<h1 align="center">🌟 Portfolio Builder 🌟</h1>
+<p align="center">API for React application for creating simple portfolios in just a couple of minutes using pre-built templates</p>
 
-<h3 align="center">You can build your portfolio in couple of minutes</h3>
+<p align="center">
+<a href="https://github.com/Rohit19060/portfolio-builder-api/blob/master/LICENSE" target="_blank" title="License">
+<img src="https://img.shields.io/github/license/Rohit19060/portfolio-builder-api?label=License&logo=Github&style=flat-square" alt="Portfolio Builder License" />
+</a>
+<a href="https://github.com/Rohit19060/portfolio-builder-api/fork" target="_blank" title="Forks">
+<img src="https://img.shields.io/github/forks/Rohit19060/portfolio-builder-api?label=Forks&logo=Github&style=flat-square" alt="Portfolio Builder Forks"/>
+</a>
+<a href="https://github.com/Rohit19060/portfolio-builder-api/stargazers" target="_blank" title="Stars">
+<img src="https://img.shields.io/github/stars/Rohit19060/portfolio-builder-api?label=Stars&logo=Github&style=flat-square" alt="Portfolio Builder Stars"/>
+</a>
+<a href="https://github.com/Rohit19060/portfolio-builder-api/issues" target="_blank" title="Issues">
+<img src="https://img.shields.io/github/issues/Rohit19060/portfolio-builder-api?label=Issues&logo=Github&style=flat-square" alt="Portfolio Builder Issues"/>
+</a>
+<a href="https://github.com/Rohit19060/portfolio-builder-api/pulls" target="_blank" title="Pull Requests">
+<img src="https://img.shields.io/github/issues-pr/Rohit19060/portfolio-builder-api?label=Pull%20Requests&logo=Github&style=flat-square" alt="Portfolio Builder Pull Requests"/>
+</a>
+<a href="https://github.com/Rohit19060/portfolio-builder-api" target="_blank" title="Repo Size">
+<img src="https://img.shields.io/github/repo-size/Rohit19060/portfolio-builder-api?label=Repo%20Size&logo=Github&style=flat-square" alt="Portfolio Builder Repo Size"/>
+</a>
+<a href="https://discord.gg/2wpHNSjwm2" target="_blank" title="Join Community">
+<img src="https://img.shields.io/discord/737854816402800690?color=%236d82cb&label=Join%20Community&logo=discord&logoColor=%23FFFFFF&style=flat-square" alt="Join discord community for Portfolio Builder"/>
+</a>
+</p>
 
-## Table of Contents
+<p align="center" title="Portfolio Builder gif"><img src="./assets/images/main.gif" alt="Portfolio Builder gif" /></p>
 
-- [Links](#links)
-- [Available Scripts](#available-scripts)
-- [Schema](#schema)
-- [API Overview](#api-overview)
-- [Built With](#built-with)
-- [Future Updates](#future-updates)
-- [Contact](#author)
+<h2 align="center">🌐 Links 🌐</h2>
+<p align="center">
+    <a href="https://github.com/Rohit19060/portfolio-builder-client" target="_blank" title="Portfolio Builder Repo">📂 Repo</a>
+    ·
+    <a href="https://portfolio-builder-client.vercel.app/" target="_blank" title="Visit">✨ Live View</a>
+    ·
+    <a href="https://enigmatic-tundra-24310.herokuapp.com" target="_blank" title="portfolio-builder-api">🛳 API</a>
+    · 
+    <a href="https://github.com/Rohit19060/portfolio-builder-api" target="_blank" title="Portfolio Builder API">📂 API Repo</a>
+    ·
+    <a href="https://github.com/Rohit19060/portfolio-builder-api/issues/new/choose" target="_blank" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
+</p>
 
-## Links
+## 🚀 Features
 
-- [Live View](https://portfolio-builder-client.vercel.app/)
+- **Authentication System**
 
-- [Repo](https://github.com/Rohit19060/portfolio-builder-client)
+- **Number of Templates**
 
-- [Api Endpoint](https://enigmatic-tundra-24310.herokuapp.com)
+- **Highly Customizable**
 
-- [Api Endpoint Repo](https://github.com/Rohit19060/portfolio-builder-api)
+- **Easy to Use Interface**
 
-## Available Scripts
+## 🦋 Prerequisite
+
+- Basic Understanding of [HTML](https://youtu.be/JHv2jmnrLlA "HTML - First Step Towards Web Development")
+
+- Basic Understanding of [CSS](https://youtu.be/d1tP7ow7HbQ "CSS - Second Step Towards Web Development")
+
+- Basic Understanding of JavaScript
+
+- Basic Understanding of [Node](https://nodejs.org/ "Node")
+
+- Basic Understanding of [NPM](https://www.npmjs.com/ "NPM")
+
+- Basic Understanding of [Express](https://expressjs.com/ "Express")
+
+## 🛠️ Installation Steps
+
+1. Clone the repository
+
+```Bash
+git clone https://github.com/Rohit19060/portfolio-builder-api.git
+```
+
+2. Change the working directory
+
+```Bash
+cd portfolio-builder-client
+```
+
+3. Install Dependencies
+
+```Bash
+npm i
+```
+
+4. Run the app using terminal
+
+```Bash
+npm start
+```
+
+**🎇 You are Ready to Go!**
+
+## ❗ Available Commands
 
 In the project directory, you can run:
 
-### `npm run start`
+```Bash
+npm start
+```
 
 Start the server for serving or you can say simply run an express server on a defined port for listening. I am using node and the server is defined in src/server.js file.
 Perform request to get a response from it.
 
-### `npm run test`
+```Bash
+npm run test
+```
 
 Launches the test runner in the interactive watch mode.
 
-### `npm run dev`
+```Bash
+npm run dev
+```
 
 Run the server in development mode so if you perform and change in a file you don't need to terminate the server and start again, nodemon will handle that every time you save the file.
 
-### `npm run migrate`
+```Bash
+npm run migrate
+```
 
 Migrate Scripts to run postgrator and for creating tables in database and if required we can undo them too by provided scripts.
 
-### `npm run predeploy`
+```Bash
+npm run predeploy
+```
 
 For running a command before deploying. this command will fix all the error before deploying the app to Heroku.
 
-### `npm run deploy`
+```Bash
+npm run deploy
+```
 
 For deploying the API endpoint to Heroku
 
@@ -214,8 +301,8 @@ For deploying the API endpoint to Heroku
 {
     name:String,
     projects:String,
-organization:String,
-token: JWT Token
+    organization:String,
+    token: JWT Token
 }
 ```
 
@@ -233,44 +320,64 @@ token: JWT Token
 }
 ```
 
-## Built With
+## 👷 Built with
 
-- [Node](https://nodejs.org/en/) - Run-time environment
-- [Express](https://expressjs.com/) - Web application framework
-- [JWT](https://jwt.io/) - Authentication
-- [Mocha](https://mochajs.org/) - Testing
-- [Chai](https://www.chaijs.com/) - Testing
-- [Knex.js](http://knexjs.org/)- for interfacing with the PostgreSQL database
-- [React](https://reactjs.org/)- for building user interfaces
+- [Node](https://nodejs.org/en/ "Node"): as Run-time environment
 
-## Future Updates
+- [Express](https://expressjs.com/ "Express"): as Web application framework
 
-- To add Html Editor
-- To add Loading screen while fetching the data
+- [NPM](https://www.npmjs.com/ "NPM"): As Package Manager
 
-## Author
+- [JWT](https://jwt.io/ "JWT"): For Authentication
+
+- [Mocha](https://mochajs.org/ "Mocha"): For Testing
+
+- [Chai](https://www.chaijs.com/ "Chai"): For Testing
+
+- [Knex.js](http://knexjs.org/ "Knex")- For interfacing with the PostgreSQL database
+
+- [Postgrator](https://www.npmjs.com/package/postgrator "Postgrator"): For Database
+
+## 📂 Directory Structure
+
+> [`./src/app.js`](https://github.com/Rohit19060/portfolio-builder-api/blob/main/src/app.js "Petful"): Main Entry file
+
+> [`./migrations`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/migrations "Migrations"): All the Migrations are in this directory
+
+> [`./src/config.js`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/src/Components "Database"): All the Configuration related data are in this file
+
+> [`./scr/auth`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/src/auth "Auth"): Authentication router and service are in this directory
+
+> [`./scr/templates`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/src/templates "Templates"): All the templates, router and service are in this directory
+
+> [`./scr/users`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/src/users "Users"): User router and service are in this directory
+
+## 🎊 Future Updates
+
+- [ ] Add Forgot Password
+
+- [ ] Add Notification Support
+
+## 🧑🏻 Author
 
 **Rohit Jain**
 
-- [GitHub](https://github.com/rohit19060)
-- [Email](rohitjain19060@gmail.com)
-- [Website](https://kingtechnologies.in)
+- 🌌 [Profile](https://github.com/rohit19060 "Rohit Jain")
 
-## 🤝 Support
+- 🏮 [Email](mailto:rohitjain19060@gmail.com?subject=Hi%20from%20Portfolio%20Builder "Hi!")
 
-Contributions, issues and feature requests are welcome!
+- 🦁 [Website](https://kingtechnologies.in "Welcome")
 
-Feel free to check the [issues page](issues/).
+<h2 align="center">🤝 Support</h2>
 
-Give a ⭐️ if you like this project!
+<h3 align="center">🎀 Contributions (<a href="https://guides.github.com/introduction/flow" title="GitHub Flow">GitHub Flow</a>), 🔥 issues, and 🥮 feature requests are most welcome!</h3>
 
-## About
+<h3 align="center">💙 If you like this project, Give it a ⭐ and Share it with friends!</h3>
+<h3 align="center">💰 Donations Links</h3>
+<p align="center">
+<a href="https://www.paypal.me/kingrohitJ" target="_blank" title="PayPal"><img src="https://kingtechnologies.in/assets/images/paypal.png" alt="PayPal"/>
+<a href="https://www.buymeacoffee.com/rohitjain" target="Buy me a Coffee/" title="Buy me a Coffee"><img src="https://kingtechnologies.in/assets/images/coffee.png" alt="Buy me a Coffee"/>
+<a href="https://ko-fi.com/rohitjain" target="_blank" title="Ko-fi"><img src="https://kingtechnologies.in/assets/images/kofi.png" alt="Ko-fi"/></a>
+</p>
 
-API Endpoint for portfolio builder client, it is hosted on Heroku
-This is for capstone final project
-This API endpoint provides user authentication and authorization with serving HTML templates when requested by the client.
-we have defined a couple of route handlers for different request and with different methods handlers to serve them securely as well.
-In this 3 main API routes are auth, templates and users.
-
-I am using knex for Postgres builder this provides a great and simple way to write queries.
-I am using a couple of basic modules to make strong and simple API endpoint for efficient working. Some of them are here for security purposes like bcrypt and jwt.
+<p align="center">Made with JavaScript & ❤️ in India</p>

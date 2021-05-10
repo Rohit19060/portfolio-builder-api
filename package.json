@@ -1,21 +1,23 @@
 {
-  "name": "portfolio_builder_api",
+  "name": "portfolio-builder-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/server.js",
-    "migrate": "postgrator --config postgrator-config.js",
-    "migrate:test": "env NODE_ENV=test npm run migrate",
-    "migrate:production": "heroku run npm run migrate",
-    "start": "node src/server.js",
-    "predeploy": "npm audit",
-    "deploy": "git push heroku main",
-    "test": "mocha --require test/setup.js"
+  "description": "App for building your portfolio in couple of minutes",
+  "author": {
+    "name": "Rohit Jain",
+    "email": "rohitjain19060@gmail.com",
+    "url": "https://kingtechnologies.in/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "contributors": [],
+  "main": "./src/app.js",
+  "homepage": "https://portfolio-builder-client.vercel.app/",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rohit19060/portfolio-builder-api"
+  },
+  "bugs": {
+    "url": "https://github.com/Rohit19060/portfolio-builder-api/issues"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -33,10 +35,41 @@
     "winston-daily-rotate-file": "^4.5.0",
     "xss": "^1.0.8"
   },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "mocha --require test/setup.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "migrate:production": "heroku run npm run migrate",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku main"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.7",
     "supertest": "^6.0.1"
-  }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">= 15.7.0",
+    "npm": ">= 7.0.0",
+    "yarn": "^1.22.0"
+  },
+  "keywords": [
+    "<Keyword list>"
+  ],
+  "license": "MIT"
 }
