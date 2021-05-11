@@ -1,48 +1,48 @@
 <p align="center">
-  <a href="https://github.com/Rohit19060/portfolio-builder-api" target="_blank" title="Portfolio Builder">
-    <img src="https://kingtechnologies.in/assets/images/logo.png" width="80px" alt="Portfolio Builder" />
+  <a href="https://github.com/Rohit19060/portfolio-builder-api" title="Portfolio Builder">
+    <img src="https://kingtechnologies.in/assets/images/logo.png" width="80px" alt="Portfolio Builder"/>
   </a>
 </p>
 <h1 align="center">🌟 Portfolio Builder 🌟</h1>
 <p align="center">API for React application for creating simple portfolios in just a couple of minutes using pre-built templates</p>
 
 <p align="center">
-<a href="https://github.com/Rohit19060/portfolio-builder-api/blob/master/LICENSE" target="_blank" title="License">
-<img src="https://img.shields.io/github/license/Rohit19060/portfolio-builder-api?label=License&logo=Github&style=flat-square" alt="Portfolio Builder License" />
+<a href="https://github.com/Rohit19060/portfolio-builder-api/blob/master/LICENSE" title="License">
+<img src="https://img.shields.io/github/license/Rohit19060/portfolio-builder-api?label=License&logo=Github&style=flat-square" alt="Portfolio Builder License"/>
 </a>
-<a href="https://github.com/Rohit19060/portfolio-builder-api/fork" target="_blank" title="Forks">
+<a href="https://github.com/Rohit19060/portfolio-builder-api/fork" title="Forks">
 <img src="https://img.shields.io/github/forks/Rohit19060/portfolio-builder-api?label=Forks&logo=Github&style=flat-square" alt="Portfolio Builder Forks"/>
 </a>
-<a href="https://github.com/Rohit19060/portfolio-builder-api/stargazers" target="_blank" title="Stars">
+<a href="https://github.com/Rohit19060/portfolio-builder-api/stargazers" title="Stars">
 <img src="https://img.shields.io/github/stars/Rohit19060/portfolio-builder-api?label=Stars&logo=Github&style=flat-square" alt="Portfolio Builder Stars"/>
 </a>
-<a href="https://github.com/Rohit19060/portfolio-builder-api/issues" target="_blank" title="Issues">
+<a href="https://github.com/Rohit19060/portfolio-builder-api/issues" title="Issues">
 <img src="https://img.shields.io/github/issues/Rohit19060/portfolio-builder-api?label=Issues&logo=Github&style=flat-square" alt="Portfolio Builder Issues"/>
 </a>
-<a href="https://github.com/Rohit19060/portfolio-builder-api/pulls" target="_blank" title="Pull Requests">
+<a href="https://github.com/Rohit19060/portfolio-builder-api/pulls" title="Pull Requests">
 <img src="https://img.shields.io/github/issues-pr/Rohit19060/portfolio-builder-api?label=Pull%20Requests&logo=Github&style=flat-square" alt="Portfolio Builder Pull Requests"/>
 </a>
-<a href="https://github.com/Rohit19060/portfolio-builder-api" target="_blank" title="Repo Size">
+<a href="https://github.com/Rohit19060/portfolio-builder-api" title="Repo Size">
 <img src="https://img.shields.io/github/repo-size/Rohit19060/portfolio-builder-api?label=Repo%20Size&logo=Github&style=flat-square" alt="Portfolio Builder Repo Size"/>
 </a>
-<a href="https://discord.gg/2wpHNSjwm2" target="_blank" title="Join Community">
+<a href="https://discord.gg/2wpHNSjwm2" title="Join King Tech's Community">
 <img src="https://img.shields.io/discord/737854816402800690?color=%236d82cb&label=Join%20Community&logo=discord&logoColor=%23FFFFFF&style=flat-square" alt="Join discord community for Portfolio Builder"/>
 </a>
 </p>
 
-<p align="center" title="Portfolio Builder gif"><img src="./assets/images/main.gif" alt="Portfolio Builder gif" /></p>
+<p align="center" title="Portfolio Builder"><img src="./assets/images/main.png" alt="Portfolio Builder"/></p>
 
 <h2 align="center">🌐 Links 🌐</h2>
 <p align="center">
-    <a href="https://github.com/Rohit19060/portfolio-builder-client" target="_blank" title="Portfolio Builder Repo">📂 Repo</a>
+    <a href="https://github.com/Rohit19060/portfolio-builder-client" title="Portfolio Builder Repo">📂 Repo</a>
     ·
-    <a href="https://portfolio-builder-client.vercel.app/" target="_blank" title="Visit">✨ Live View</a>
+    <a href="https://portfolio-builder-client.vercel.app/" title="Visit">✨ Live View</a>
     ·
-    <a href="https://enigmatic-tundra-24310.herokuapp.com" target="_blank" title="portfolio-builder-api">🛳 API</a>
+    <a href="https://enigmatic-tundra-24310.herokuapp.com" title="Portfolio Builder API Repo">🛳 API</a>
     · 
-    <a href="https://github.com/Rohit19060/portfolio-builder-api" target="_blank" title="Portfolio Builder API">📂 API Repo</a>
+    <a href="https://github.com/Rohit19060/portfolio-builder-api" title="Portfolio Builder API">📂 API Repo</a>
     ·
-    <a href="https://github.com/Rohit19060/portfolio-builder-api/issues/new/choose" target="_blank" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
+    <a href="https://github.com/Rohit19060/portfolio-builder-api/issues/new/choose" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
 </p>
 
 ## 🚀 Features
@@ -344,7 +344,7 @@ For deploying the API endpoint to Heroku
 
 > [`./migrations`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/migrations "Migrations"): All the Migrations are in this directory
 
-> [`./src/config.js`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/src/Components "Database"): All the Configuration related data are in this file
+> [`./src/config.js`](https://github.com/Rohit19060/portfolio-builder-api/blob/main/src/config.js "Configuration"): All the Configuration related data are in this file
 
 > [`./scr/auth`](https://github.com/Rohit19060/portfolio-builder-api/tree/main/src/auth "Auth"): Authentication router and service are in this directory
 
@@ -362,7 +362,7 @@ For deploying the API endpoint to Heroku
 
 **Rohit Jain**
 
-- 🌌 [Profile](https://github.com/rohit19060 "Rohit Jain")
+- 🌌 [Profile](https://github.com/Rohit19060 "Rohit Jain")
 
 - 🏮 [Email](mailto:rohitjain19060@gmail.com?subject=Hi%20from%20Portfolio%20Builder "Hi!")
 
@@ -370,14 +370,14 @@ For deploying the API endpoint to Heroku
 
 <h2 align="center">🤝 Support</h2>
 
-<h3 align="center">🎀 Contributions (<a href="https://guides.github.com/introduction/flow" title="GitHub Flow">GitHub Flow</a>), 🔥 issues, and 🥮 feature requests are most welcome!</h3>
+<h3 align="center">🎀 Contributions (<a href="https://guides.github.com/introduction/flow" title="GitHub flow">GitHub Flow</a>), 🔥 issues, and 🥮 feature requests are most welcome!</h3>
 
 <h3 align="center">💙 If you like this project, Give it a ⭐ and Share it with friends!</h3>
 <h3 align="center">💰 Donations Links</h3>
 <p align="center">
-<a href="https://www.paypal.me/kingrohitJ" target="_blank" title="PayPal"><img src="https://kingtechnologies.in/assets/images/paypal.png" alt="PayPal"/>
-<a href="https://www.buymeacoffee.com/rohitjain" target="Buy me a Coffee/" title="Buy me a Coffee"><img src="https://kingtechnologies.in/assets/images/coffee.png" alt="Buy me a Coffee"/>
-<a href="https://ko-fi.com/rohitjain" target="_blank" title="Ko-fi"><img src="https://kingtechnologies.in/assets/images/kofi.png" alt="Ko-fi"/></a>
+<a href="https://www.paypal.me/kingrohitJ" title="PayPal"><img src="https://kingtechnologies.in/assets/images/paypal.png" alt="PayPal"/></a>
+<a href="https://www.buymeacoffee.com/rohitjain" title="Buy me a Coffee"><img src="https://kingtechnologies.in/assets/images/coffee.png" alt="Buy me a Coffee"/></a>
+<a href="https://ko-fi.com/rohitjain" title="Ko-fi"><img src="https://kingtechnologies.in/assets/images/kofi.png" alt="Ko-fi"/></a>
 </p>
 
 <p align="center">Made with JavaScript & ❤️ in India</p>
